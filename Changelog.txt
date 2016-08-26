@@ -1,0 +1,7 @@
+Version 0.2-beta:
+Textures updated.
+Some code improvements.
+
+
+Version 0.1-beta:
+First release.
