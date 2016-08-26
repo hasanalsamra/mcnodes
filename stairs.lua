@@ -1,0 +1,7 @@
+mcnodes.register_stair_and_slab("quartz", "mcnodes:quartz_block", {cracky = 3}, {"mcnodes_quartz_block.png"}, "Quartz stair", "Quartz slab", default.node_sound_stone_defaults())
+mcnodes.register_stair_and_slab("blue_brick", "mcnodes:blue_brick", {cracky = 3}, {"mcnodes_blue_brick.png"}, "Blue brick stair", "Blue brick slab", default.node_sound_stone_defaults())
+mcnodes.register_stair_and_slab("yellow_brick", "mcnodes:yellow_brick", {cracky = 3}, {"mcnodes_yellow_brick.png"}, "Yellow brick stair", "Yellow brick slab", default.node_sound_stone_defaults())
+mcnodes.register_stair_and_slab("grey_brick", "mcnodes:grey_brick", {cracky = 3}, {"mcnodes_grey_brick.png"}, "Grey brick stair", "Grey brick slab", default.node_sound_stone_defaults())
+mcnodes.register_stair_and_slab("smooth_sandstone_brick", "mcnodes:smooth_sandstone", {cracky = 3}, {"mcnodes_smooth_sandstone.png"}, "Smooth sandstone stair", "Smooth sandstone slab", default.node_sound_stone_defaults())
+mcnodes.register_stair_and_slab("red_sandstone", "mcnodes:red_sandstone", {cracky = 3}, {"default_sandstone.png^[colorize:#983800:200"}, "Red sandstone stair", "Red sandstone slab", default.node_sound_stone_defaults())
+mcnodes.register_stair_and_slab("red_smooth_sandstone", "mcnodes:red_smooth_sandstone", {cracky = 3}, {"mcnodes_smooth_sandstone.png^[colorize:#983800:200"}, "Red smooth sandstone stair", "Red smooth sandstone slab", default.node_sound_stone_defaults())
