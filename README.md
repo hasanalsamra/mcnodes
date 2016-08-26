@@ -13,3 +13,9 @@ More custom nodes mod for minetest.
 
 # License
 See LICENSE.txt file.
+
+
+# Download
+It is not recommended to download the mod from github (here only for testing) the good version can be downloaded from here: http://hasanalsamra.tk/minetest/mods/
+
+Some crafting methods provided
