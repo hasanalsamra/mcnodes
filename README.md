@@ -1,4 +1,4 @@
-# Mcnodes
+# Mcnodes 0.2-beta
 More custom nodes mod for minetest.
 
 -- This mod adds a 3d chest, if you don't like it edit nodes.lua file and set the ChangeChest variable to 0
