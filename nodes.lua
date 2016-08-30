@@ -1,5 +1,4 @@
 ChangeChest = '1'
-LargeChest = '1'
 
 minetest.register_node("mcnodes:quartz_block", {
 	description = "Quartz block",
