@@ -3,6 +3,6 @@ minetest.register_chatcommand("mcnodes", {
 	description = "Mcnodes mod version",
 	privs = {},
 	func = function()
-		return true, mcnodes.version
+		return true, version
 	end,
 })
