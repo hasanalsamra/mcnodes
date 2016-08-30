@@ -143,9 +143,9 @@ if LargeChest == '1' then
 					end
 				end
 			
-				minetest.chat_send_all('State: ' .. MainNodeOn)
+				--minetest.chat_send_all('State: ' .. MainNodeOn)
 			end
 		end
-		minetest.chat_send_all('Y-axis: ' .. getNodeYaxis(pos))
+		--minetest.chat_send_all('Y-axis: ' .. getNodeYaxis(pos))
 	end)
 end
