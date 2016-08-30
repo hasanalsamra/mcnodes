@@ -1,8 +1,13 @@
+Version 0.3-beta:
+  Improve some textures.
+  Fix large chest issue.
+  added /mcnodes command to easly get the mod version.
+
 Version 0.2-beta:
-Textures updated.
-Set textures license (See LICENSE.txt file for more information).
-Some code improvements.
+  Textures updated.
+  Set textures license (See LICENSE.txt file for more information).
+  Some code improvements.
 
 
 Version 0.1-beta:
-First release.
+  First release.
