@@ -65,72 +65,87 @@ if LargeChest == '1' then
 				done = '0'
 			
 				if done == '0' then
-					if minetest.get_node_or_nil({x=pos.x+1, y=pos.y, z=pos.z}).name == "default:chest" then
+					oldnodepos = {x=pos.x+1, y=pos.y, z=pos.z}
+					if minetest.get_node_or_nil(oldnodepos).name == "default:chest" then
 						MainNodeOn = 'XP'
-						NewNodeRotation = getNodeYaxis(pos)
-					
-						minetest.remove_node({x=pos.x+1, y=pos.y, z=pos.z})
-						minetest.remove_node(pos)
-					
-						if placer_pos.z < pos.z then
-							minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
-						else
-							minetest.set_node({x=pos.x+1, y=pos.y, z=pos.z}, {name="mcnodes:large_chest", param2 = facedir})
+						
+						if PlaceChest('XP', pos, oldnodepos) == true then
+							minetest.remove_node(oldnodepos)
+							minetest.remove_node(pos)
+							
+							if placer_pos.z < pos.z then
+								minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
+							else
+								minetest.set_node(oldnodepos, {name="mcnodes:large_chest", param2 = facedir})
+							end
+							
+							done = '1'
 						end
-					
-						done = '1'
 					end
 				end
 			
 				if done == '0' then
-					if minetest.get_node_or_nil({x=pos.x, y=pos.y, z=pos.z+1}).name == "default:chest" then
+					oldnodepos = {x=pos.x, y=pos.y, z=pos.z+1}
+					if minetest.get_node_or_nil(oldnodepos).name == "default:chest" then
 						MainNodeOn = 'ZP'
-						minetest.remove_node({x=pos.x, y=pos.y, z=pos.z+1})
-						minetest.remove_node(pos)
+						
+						if PlaceChest('ZP', pos, oldnodepos) == true then
+							minetest.remove_node(oldnodepos)
+							minetest.remove_node(pos)
 					
-						if placer_pos.x < pos.x then
-							minetest.set_node({x=pos.x, y=pos.y, z=pos.z+1}, {name="mcnodes:large_chest", param2 = facedir})
-						else
-							minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
+							if placer_pos.x < pos.x then
+								minetest.set_node(oldnodepos, {name="mcnodes:large_chest", param2 = facedir})
+							else
+								minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
+							end
+					
+							done = '1'
 						end
-					
-						done = '1'
 					end
 				end
 			
 				if done == '0' then
-					if minetest.get_node_or_nil({x=pos.x-1, y=pos.y, z=pos.z}).name == "default:chest" then
+					oldnodepos = {x=pos.x-1, y=pos.y, z=pos.z}
+					if minetest.get_node_or_nil(oldnodepos).name == "default:chest" then
 						MainNodeOn = 'XN'
-						minetest.remove_node({x=pos.x-1, y=pos.y, z=pos.z})
-						minetest.remove_node(pos)
-						if placer_pos.z > pos.z then
-							minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
-						else
-							minetest.set_node({x=pos.x-1, y=pos.y, z=pos.z}, {name="mcnodes:large_chest", param2 = facedir})
-						end
+						
+						if PlaceChest('XN', pos, oldnodepos) == true then
+							minetest.remove_node(oldnodepos)
+							minetest.remove_node(pos)
+							if placer_pos.z > pos.z then
+								minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
+							else
+								minetest.set_node(oldnodepos, {name="mcnodes:large_chest", param2 = facedir})
+							end
 					
-						done = '1'
+							done = '1'
+						end
 					end
 				end
 			
 				if done == '0' then
-					if minetest.get_node_or_nil({x=pos.x, y=pos.y, z=pos.z-1}).name == "default:chest" then
+					oldnodepos = {x=pos.x, y=pos.y, z=pos.z-1}
+					if minetest.get_node_or_nil(oldnodepos).name == "default:chest" then
 						MainNodeOn = 'ZN'
-						minetest.remove_node({x=pos.x, y=pos.y, z=pos.z-1})
-						minetest.remove_node(pos)
-					
-						if placer_pos.x > pos.x then
-							minetest.set_node({x=pos.x, y=pos.y, z=pos.z-1}, {name="mcnodes:large_chest", param2 = facedir})
-						else
-							minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
+						
+						if PlaceChest('ZN', pos, oldnodepos) == true then
+							minetest.remove_node(oldnodepos)
+							minetest.remove_node(pos)
+							
+							if placer_pos.x > pos.x then
+								minetest.set_node(oldnodepos, {name="mcnodes:large_chest", param2 = facedir})
+							else
+								minetest.set_node(pos, {name="mcnodes:large_chest", param2 = facedir})
+							end
+						
+							done = '1'
 						end
-					
-						done = '1'
 					end
 				end
 			
-				--minetest.chat_send_all('State: ' .. MainNodeOn .. ', Y-axis: ' .. NewNodeRotation)
+				minetest.chat_send_all('State: ' .. MainNodeOn)
 			end
 		end
+		minetest.chat_send_all('Y-axis: ' .. getNodeYaxis(pos))
 	end)
 end
