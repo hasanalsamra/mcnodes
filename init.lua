@@ -1,6 +1,6 @@
 mcnodes = {}
 
-mcnodes.version = '0.3-beta'
+version = '0.3-beta'
 
 LargeChest = '1'
 
