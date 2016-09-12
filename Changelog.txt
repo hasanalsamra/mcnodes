@@ -1,6 +1,6 @@
 Version 0.4:
   Fixed new large chest bug.
-  Added Mchud submod and can be disable by changing the McHud variable to 0 which is located in the init.lua file (this submod is just in testing so it is not finished).
+  Added Mchud submod (most stracture taken from blockmen's better hud mod) and can be disable by changing the McHud variable to 0 which is located in the init.lua file (this submod is just in testing so it is not finished).
 
 Version 0.3-beta:
   Improve some textures.
