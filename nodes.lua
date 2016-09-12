@@ -1,5 +1,3 @@
-ChangeChest = '1'
-
 minetest.register_node("mcnodes:quartz_block", {
 	description = "Quartz block",
 	tiles = {"mcnodes_quartz_block_top.png", "mcnodes_quartz_block_bottom.png", "mcnodes_quartz_block.png", "mcnodes_quartz_block.png", "mcnodes_quartz_block.png", "mcnodes_quartz_block.png"},

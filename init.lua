@@ -1,10 +1,14 @@
 mcnodes = {}
 
-version = '0.3-beta'
+version = '0.4'
+
+ChangeChest = '1'
 
 LargeChest = '1'
 
 AutoStairs = '1'
+
+McHud = '1'
 
 dofile(minetest.get_modpath("mcnodes").."/functions.general.lua")
 
@@ -37,4 +41,8 @@ dofile(minetest.get_modpath("mcnodes").."/chatcommands.lua")
 if AutoStairs == '1' then
 	dofile(minetest.get_modpath("mcnodes").."/auto_stairs_functions.lua")
 	dofile(minetest.get_modpath("mcnodes").."/auto_stairs.lua")
+end
+
+if McHud == '1' then
+	dofile(minetest.get_modpath("mcnodes").."/mchud/mchud.init.lua")
 end

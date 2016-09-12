@@ -1,3 +1,4 @@
+--Normal chest
 if ChangeChest == '1' then
 	local chest_formspec =
 		"size[8,9]" ..

@@ -8,7 +8,7 @@ function PlaceChest(NodeOn, Pos, OldNodePos)
 	end
 	
 	if NodeOn == 'ZP' then
-		if getNodeYaxis(Pos) == '270' and getNodeYaxis(OldNodePos) == '270' or getNodeYaxis(Pos) == '270' and getNodeYaxis(OldNodePos) == '90' or getNodeYaxis(Pos) == '90' and getNodeYaxis(OldNodePos) == '270' then
+		if getNodeYaxis(Pos) == '90' and getNodeYaxis(OldNodePos) == '90' or getNodeYaxis(Pos) == '270' and getNodeYaxis(OldNodePos) == '90' or getNodeYaxis(Pos) == '90' and getNodeYaxis(OldNodePos) == '270' then
 			True = false
 		else
 			True = true
